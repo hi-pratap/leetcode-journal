@@ -51,7 +51,8 @@ public class EvenOdd {
         int palindrome=palindromeNumber(1221);
         System.out.println("is Palindrome: "+palindrome);
 
-        int leapYear=leapYearCheck(1998);
+        boolean leapYear=leapYearCheck(2021);
+        System.out.println("is leapyear: "+leapYear);
 
 
     }
@@ -61,11 +62,12 @@ public class EvenOdd {
      *
      * 1. The year is multiple of 400.
      * 2. The year is a multiple of 4 and not a multiple of 100.
-     * @param n
+     * @param year
      * @return
      */
-    private static int leapYearCheck(int n) {
-        return 0;
+    private static boolean leapYearCheck(int year) {
+        if(year%400==0) return true;
+        return year % 4 == 0 && year % 100 != 0;
     }
 
     private static int palindromeNumber(int n) {
@@ -74,7 +76,7 @@ public class EvenOdd {
         return 0;
     }
 
-    private static int reverseNumber(int n) {
+    public static int reverseNumber(int n) {
         int reverse=0;
         while(n>0){
             int lastDigit=n%10; // get the last digit
