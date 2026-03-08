@@ -42,8 +42,52 @@ public class EvenOdd {
         boolean isPrimeCheck3=isNumberPrime(36);
         System.out.println(isPrimeCheck3);
 
+        int sumOfNumbers=sumOfNumbers(2,3);
+        System.out.println(sumOfNumbers);
+
+        int reverse=reverseNumber(12345);
+        System.out.println(reverse);
+
+        int palindrome=palindromeNumber(1221);
+        System.out.println("is Palindrome: "+palindrome);
+
+        int leapYear=leapYearCheck(1998);
+
+
     }
 
+    /**
+     * Note: A year is a leap year if "any one of " the following conditions are satisfied:
+     *
+     * 1. The year is multiple of 400.
+     * 2. The year is a multiple of 4 and not a multiple of 100.
+     * @param n
+     * @return
+     */
+    private static int leapYearCheck(int n) {
+        return 0;
+    }
+
+    private static int palindromeNumber(int n) {
+        int reverseNumber = reverseNumber(n);
+        if(n==reverseNumber) return 1;
+        return 0;
+    }
+
+    private static int reverseNumber(int n) {
+        int reverse=0;
+        while(n>0){
+            int lastDigit=n%10; // get the last digit
+            reverse=reverse*10+lastDigit; //create reverse number
+            n/=10; // remove the last digit
+        }
+        return reverse;
+    }
+
+    public static int sumOfNumbers(int a,int b){
+
+        return a+b;
+    }
     private static boolean isNumberPrime(int n) {
         for (int i = 2; i*i<n; i++) {
             if(n%i==0){
