@@ -4,7 +4,17 @@ public class GCD {
     static void main() {
         int result=findGCD(36,60);
         System.out.println(result);
-        System.out.println(findGCDByEuclidean(36,60));
+        System.out.println(findGCDByEuclideanOptimised(1226,60));
+        System.out.println(eulidGcd(1226,60));
+    }
+
+    private static int eulidGcd(int a, int b) {
+
+        while(a!=0 && b!=0){
+            if(a>b) a=a%b;
+            else b=b%a;
+        }
+      return (a != 0) ? a : b;
     }
 
     private static int findGCD(int n, int m) {
@@ -30,8 +40,14 @@ public class GCD {
      * @return
      */
     private static int findGCDByEuclidean(int n, int m) {
-   if(n==m) return n;
-   if(n>m) return findGCDByEuclidean(n-m,m);
- else return findGCDByEuclidean(n,m-n);
+         if(n==m) return n;
+        if(n>m) return findGCDByEuclidean(n-m,m);
+        else return findGCDByEuclidean(n,m-n);
+    }
+
+    private static int findGCDByEuclideanOptimised(int n, int m) {
+         if(n==0 || m==0) return Math.max(n,m);
+        if(n>m) return findGCDByEuclidean(n%m,m);
+        else return findGCDByEuclidean(n,m%n);
     }
 }
