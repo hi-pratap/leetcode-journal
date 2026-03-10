@@ -5,10 +5,10 @@ public class GCD {
         int result=findGCD(36,60);
         System.out.println(result);
         System.out.println(findGCDByEuclideanOptimised(1226,60));
-        System.out.println(eulidGcd(1226,60));
+        System.out.println(EuclidGcd(1226,60));
     }
 
-    private static int eulidGcd(int a, int b) {
+    private static int EuclidGcd(int a, int b) {
 
         while(a!=0 && b!=0){
             if(a>b) a=a%b;
