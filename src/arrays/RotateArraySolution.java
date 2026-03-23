@@ -1,7 +1,7 @@
 package arrays;
 
 import java.util.Arrays;
-public class Solution {
+public class RotateArraySolution {
     static void main() {
         rotateArray(new int []{1,2,3},2);
     }
