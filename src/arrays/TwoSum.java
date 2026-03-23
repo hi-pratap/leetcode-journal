@@ -8,16 +8,30 @@ public class TwoSum {
         int [] arr={1,2,3,4,5,6,7,8};
         int target=12;
         int[] ints = bruteForce(arr, target);
-        System.out.println(Arrays.toString(ints));
 
-        int [] optimised=optimised(arr,target);
+        int [] optimised=twoSum(arr,target);
+        System.out.println(Arrays.toString(optimised));
     }
 
-    private static int[] optimised(int[] arr, int target) {
+    public static int[] twoSum(int[] nums, int target) {
 
-//        Map<>
+        int start=0;
+        int adjecent=start+1;
+        int n=nums.length-1;
+        while(n>start){
 
-        return null;
+            if(nums[start]+nums[adjecent]==target){
+                return new int [] {nums[start],nums[adjecent]};
+            }else{
+                if(adjecent==n){
+                    start++;
+                    adjecent=start+1;
+                }
+                adjecent++;
+            }
+
+        }
+ return new int[]{0,0};
     }
 
     private static int[] bruteForce(int[] arr, int target) {
