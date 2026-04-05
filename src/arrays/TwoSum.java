@@ -16,18 +16,18 @@ public class TwoSum {
     public static int[] twoSum(int[] nums, int target) {
 
         int start=0;
-        int adjecent=start+1;
+        int adjacent =start+1;
         int n=nums.length-1;
         while(n>start){
 
-            if(nums[start]+nums[adjecent]==target){
-                return new int [] {nums[start],nums[adjecent]};
+            if(nums[start]+nums[adjacent]==target){
+                return new int [] {nums[start],nums[adjacent]};
             }else{
-                if(adjecent==n){
+                if(adjacent ==n){
                     start++;
-                    adjecent=start+1;
+                    adjacent =start+1;
                 }
-                adjecent++;
+                adjacent++;
             }
 
         }
