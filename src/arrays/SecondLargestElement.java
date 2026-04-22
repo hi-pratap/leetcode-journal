@@ -1,7 +1,5 @@
 package arrays;
 
-import java.util.Arrays;
-
 public class SecondLargestElement {
     static void main() {
         int [] arr={1,2,3,4,5};

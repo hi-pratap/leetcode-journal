@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class ReverseArray {
     static void main() {
-        int [] arr={1,2,3,4,5};
+        int [] arr={1,2,3,4,5,8,12,9,11};
 
       //  System.out.println(Arrays.toString(reverseArrayBruteForce(arr)));
         System.out.println(Arrays.toString(reverseArrayTwoPointers(arr)));

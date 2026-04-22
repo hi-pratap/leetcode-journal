@@ -2,7 +2,7 @@ package arrays;
 
 import java.util.Arrays;
 
-public class SqaureAndSortArray {
+public class SquareAndSortArray {
     static void main() {
         int[] arr = {-7,-3,2,3,11};
         int[] ints = sortedSquares(arr);
@@ -11,8 +11,8 @@ public class SqaureAndSortArray {
     public static int[] sortedSquares(int[] arr) {
 
         int start = 0;
-        int end = arr.length - 1;
         int n=arr.length-1;
+        int end = n;
         int[] ans=new int[arr.length];
         while (start <= end) {
             if (Math.abs(arr[start]) > Math.abs(arr[end])) {

@@ -1,9 +1,5 @@
 package arrays;
 
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.Set;
-
 public class RemoveDuplicates {
 
     static void main() {
@@ -11,11 +7,9 @@ public class RemoveDuplicates {
        removeDuplicates(nums);
     }
 
-    private static int removeDuplicates(int[] nums) {
-        if (nums.length == 0) return 0;
-
+    private static void removeDuplicates(int[] nums) {
+        if (nums.length == 0) return;
         int i = 1;
-
         for (int j = 1; j < nums.length; j++) {
             if (nums[j] != nums[i - 1]) {
                 nums[i] = nums[j];
@@ -23,7 +17,6 @@ public class RemoveDuplicates {
             }
         }
 
-        return i;
     }
 
 }

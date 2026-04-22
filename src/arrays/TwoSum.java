@@ -22,15 +22,13 @@ public class TwoSum {
 
             if(nums[start]+nums[adjacent]==target){
                 return new int [] {nums[start],nums[adjacent]};
-            }else{
+            }
                 if(adjacent ==n){
                     start++;
                     adjacent =start+1;
-                }
+                }else{
                 adjacent++;
-            }
-
-        }
+            }}
  return new int[]{0,0};
     }
 
