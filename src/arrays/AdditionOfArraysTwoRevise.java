@@ -11,11 +11,11 @@ public class AdditionOfArraysTwoRevise {
         //
         //12698
         //addTwoArrays(arr1, arr2);
-        subStractTwoArrays(arr1, arr2);
+        subStructTwoArrays(arr1, arr2);
 
     }
 
-    private static void subStractTwoArrays(int[] arr1, int[] arr2) {
+    private static void subStructTwoArrays(int[] arr1, int[] arr2) {
         int[] ans = new int[Math.max(arr1.length, arr2.length) + 1];
         int i = arr1.length - 1;
         int j = arr2.length - 1;
@@ -44,9 +44,11 @@ public class AdditionOfArraysTwoRevise {
         int carry = 0;
         while (k > 0) {
             int sum = 0;
-            sum += carry;
+
+            //sum=arr1+arr2+carry
             if (i >= 0) sum = sum + arr1[i];
             if (j >= 0) sum = sum + arr2[j];
+            sum += carry;
             carry = sum / 10;
             ans[k] = sum % 10;
             k--;

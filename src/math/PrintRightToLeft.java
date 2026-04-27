@@ -3,7 +3,7 @@ package math;
 public class PrintRightToLeft {
     static void main() {
 
-        int n=12345;
+        int n=123;
         int orignal=n;
         int digits=0;
         //Count the Digits here
@@ -19,6 +19,7 @@ public class PrintRightToLeft {
             int quotient = orignal / divisor;
             System.out.println(quotient);
             orignal%=divisor;
+//            123%100=23
             divisor/=10;
         }
 
