@@ -1,9 +1,12 @@
 package arrays;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class PlaindromeString{
     static void main() {
+        Scanner scanner=new Scanner(System.in);
+
         String s = "A man, a plan, a canal: Panama";
         String cleanS=s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
         // check if start is equal to end or not
@@ -17,5 +20,9 @@ public class PlaindromeString{
             end--;
         }
 System.out.println(flag);
+
+while(true){
+
+}
     }
 }
