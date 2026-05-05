@@ -1,4 +1,4 @@
-package arrays;
+package arrays.twoD;
 
 public class SpiralMatrix2DArrays {
     static void main() {
