@@ -9,6 +9,9 @@ public class main{
         // dummy push 5
         // dummy push 6
         //Time-complexity lecture
+        //Recursion First Video is done
+        //today practice the previous questions
+
         System.out.println("Hello");
     }
 }
